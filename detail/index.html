@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>입모양 사전</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel=" shortcut icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico">
+</head>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+  (function(d) {
+    var config = {
+      kitId: 'dcq2ofx',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+	<meta charset="utf-8"> 
+	<style type="text/css">
+			@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');  
+}
+    font-weight: normal;
+    font-style: normal;
+}
+		body{
+				background-color:white;
+				height: 100vh;
+				width: 100vw;
+				
+				margin:0;
+				padding: 0;
+				
+				align-items: center;
+				overflow-x: hidden;
+
+				font-family:noto-sans-cjk-kr, sans-serif;
+				text-align: center;
+				}
+		.funstory > h2{text-align: left; width:46vw;padding-bottom: 5%; font-weight: 700; font-size: 18px; margin: auto;}
+		h3{color:navy; font-weight:400; font-size: 36px;text-align: center;  font-family: 'TTTogether';}
+		p{font-size:1.5vh; margin-top: 0;}
+
+		footer{height:  40vh;}
+
+
+		.togglebutton p {font-size: 1em;}
+		.flex{position: relative;
+			display: flex;
+			justify-content: space-between;
+			width:18vw;
+			top:3vh;
+			left:60vw;
+			padding: auto;
+			}
+		.flexx{display: flex;}
+		.alien{
+				 width: 50px;
+				 height: 50px;
+				 top:50%;
+				 left:50%;
+				 z-index: 100;
+				 position: absolute;
+				 border-radius:50%;
+				 background-image: url(./mouse_alien-09.svg);
+				 background-position: center;
+				 background-repeat: no-repeat;
+				 pointer-events: none;
+				 box-sizing: border-box;
+				 transition:0.2s;
+				}
+		.toggle{
+			position:relative;
+			display: block;
+			width: 3vw;
+			height:2vh;
+			
+			background-color:#8a4ced;
+			border-radius: 15px;
+			
+			z-index: 10;
+
+		}
+		.toggle:after{
+			content:'';
+			position: absolute;
+			width:2vh;
+			height: 2vh;
+			border-radius: 30px;
+			background-color:#f9f8ca;
+			top:0.1px;
+			left:0.1px;
+			transiton:all 0.5s;
+		}
+  		.checkbox:checked + .toggle::after {
+        left : calc(3vw - 2vh); 
+        }
+        .checkbox:checked + .toggle {
+        background-color:#74d1af;
+    	}
+    	.checkbox { 
+        display : none;}
+        .togglebutton {width:11vw; z-index: 0;}
+        .checkbox:checked + .lipread {background-color: white; color:#383838;}
+        .sticky{position: sticky; top:0;}
+        .absolute{position: absolute;}
+        .note{top:90vh; left: 0;}
+
+        .top{height:10vh;}
+        .top h1{margin-left: 1%;  font-family: 'TTTogether';}
+        .top p{ font-family: 'TTTogether';}
+        .top img{height: 100%; width: auto;}
+        .lipread{background-color: #8a4ced; height: 70vh;}
+        .lipread div {width:46vw; margin: auto; padding-top: 20vh;}
+        .lipread h1 {font-family:noto-sans-cjk-kr, sans-serif; font-weight:700; font-size:42px; color:white;}
+        .lipread p{font-family:noto-sans-cjk-kr, sans-serif; font-weight:700; font-size:42px; color:white;}
+        .funstory{padding-top: 6vh; padding-bottom:10vh; width: 100vw; margin: auto; background-image: url(./background.png)}
+
+
+         .swiper-container {
+        width: 35vw;
+        height: 86vh;
+        border:solid 3px; 
+         border-radius:30px; 
+      
+
+      }
+      .swiper-pagination{left: 48vw;
+    top: 85%}
+
+      .swiper-slide {
+        text-align: left;
+        background-color:white;
+      	padding-top: 5%;
+      	padding-bottom: 15%;
+         background: rgb(255,255,255);
+			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 95%, rgba(33,42,155,1) 95%, rgba(33,42,155,1) 100%, rgba(33,42,155,1) 100%);
+
+        /* Center slide text vertically */
+        
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+         width: auto;
+        height: 40%;
+        object-fit: cover;
+        margin: auto;
+        margin-bottom: 3vh;
+      }
+      .swiper-slide p {font-size: 1em; width: 70%; margin: auto; line-height: 2.3em;}
+      .long img {
+        display: block;
+        width: auto;
+        height: 50%;
+        object-fit: cover;
+      }
+      .swiper-slide div {padding-left: 5%; padding-right: 5%;}
+
+      .level{position: fixed; top:45%; left:78vw; z-index: 100; width: auto;}
+      .level h2{font-family:noto-sans-cjk-kr, sans-serif; font-weight: 700; font-size: 20px;}
+      .level img{width: 10%; padding-left: 1vw;}
+      .green{color:#74d1af;}
+      .yellow{color:#f9f8ca;}
+      .navy{color:#212a9b;}
+	</style>
+<body>
+	<div class="alien"></div> 
+	<div class=" top" style="display: flex; padding-left: 5%;justify-content: flex-start">
+		<img src="logo.png">
+		<h1>입모양 사전</h1>
+		<div class="flex">
+		<p>말읽기모드</p>
+		<input type="checkbox" id="switch" class="checkbox"  />
+		<label for="switch" class="toggle">	
+		</label>
+		<p>수화모드</p>
+	</div>
+	</div>
+	<nav>
+		<div class="level green flexx">
+				<h2>수사하기</h2>
+				<img src="./search.svg">
+		</div>
+	</nav>
+	<div class="lipread">
+		<div>
+		<h1>말읽기 (Lip reading)</h1>
+		<p><span class="green">입의 모양</span>과 <span class="yellow">표정</span>으로 상대가 무슨 말을 하고 있는지 알아맞히는 기술</p>
+	</div></div>
+	
+	<div class="funstory">
+		<h2>네가지 : 말읽기에 관한 재밌는 이야기</h2>
+		<div class="swiper-container mySwiper">
+      	<div class="swiper-wrapper">
+        <div class="swiper-slide">
+        	<h3>명탐정 드루리 레인</h3>
+        	<img src="./x_trag.jpg">
+			
+        	<p> 드루리 레인은 1932년, 엘러리 퀸의 미스터리 소설에 등장한 주인공이에요.</p>
+        	<p>명배우였던 드루리 레인은 소리를 하나도 들을 수 없지만 말읽기를 배워서 살고 있었어요.</p>
+        	<p>행복한 노후를 지내던 그는 '크래머 사건'을 신문 기사만으로 해결하는 멋진 추리력을 보여주었답니다.</p>
+        	
+        	
+        </div>
+    
+        <div class="swiper-slide">
+        	<h3>사람보다 뛰어난 말읽기 전문가</h3>
+        	<img src="./AI.gif" >
+			
+        	<p>구글의 딥마인드가 여러 방송 동영상을 가지고 5000시간동안 딥러닝을 한 결과, 말읽기를 하는 데에 성공했어요.</p>
+        	<p>컴퓨터는 입술의 움직임을 읽어서 200개의 비디오 테스트 중에 50%를 읽었어요.</p>
+        	<p>법정에서 일하는 독순술 전문가는 25%만 알아들을 수 있었대요.</p>
+        	<p>얼마 안 가 인공지능 말읽기 통역사가 생길 것 같네요.</p>
+        	
+        	
+        </div>
+        <div class="swiper-slide">
+        	<h3>야구 선수들은 왜 입을 가릴까?</h3>
+        	<img src="./baseball.jpg">
+        	<p>야구 경기를 할 때 선수들이 글러브로 입을 가리고 말하는 걸 본 적이 있나요?</p>
+        	<p>상대 팀에서 독순술을 할 줄 아는 사람이 입술을 읽어서 작전을 알아챌 가능성이 있어요.</p>
+        	<p>그래서 입모양이 보이지 않게 가리고 말하는 거랍니다.</p>
+        	</div>
+        	
+        	
+        <div class="swiper-slide">
+        	<h3>인종차별 했어, 안 했어?</h3>
+        	<img src="./soccer.jpg">
+
+        	
+        	<p>실제로 2020년 9월 14일, 축구 경기 중에 곤살레스 선수가 네이마르 선수의 머리를 때렸어요.</p>
+        	<p>곤살레스 선수는 '네이마르가 나에게 원숭이라고 했다'고 인종 차별을 당했기 때문에 때렸다고 말했어요.</p>
+        	<p>그 순간이 담긴 카메라 영상을 말읽기 전문가에게 가져가 판단해 달라고 했어요.</p>
+        	<p>결국 인종차별적 발언을 했다는 구체적인 증거를 확보하지 못하며 무혐의로 결론이 났습니다.</p>
+        	
+        	</div>
+        	
+        </div>
+       <div class="swiper-pagination"></div> 
+      </div>
+      
+    </div>
+	
+
+	<footer>
+		
+	</footer>
+	
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  	$(document).mousemove(function(e){
+  		$('.alien').css({left:e.pageX, top:e.pageY});
+  	})
+
+
+
+
+ 
+  </script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+
+</body>
+</html>
